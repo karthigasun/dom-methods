@@ -7,7 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-     
+     <fieldset>
+        
+        <legend>Name and Password</legend>
     <form onsubmit="return validation()">
         <label for="name">Your Name</label>
         <input type="text" id="name" placeholder="Enter Your Name">
@@ -21,15 +23,41 @@
         <input type="password" id="cpassword" placeholder="Re-enter Your Password" oninput="pass()">
         <span id="cpword"></span><br><br>
 
-        <label for="email">Email</label>
-        <input type="text" id="email" placeholder="Enter Your Mail"><br><br>
-
-        <label for="mobile">Mobile</label>
-        <input type="text" id="mobile"  placeholder="Enter Your Mobile">
-
-        <button type="submit">Submit</button>
+        <button type="submit">Submit</button><br><br>
+     </fieldset><br><br>
 
     </form>
+
+    <fieldset>
+        <legend>Email</legend>
+        <form onsubmit="return validate()">
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Enter Your Mail"><br><br>
+    
+            <button type="submit">Submit</button><br><br>
+        </form></fieldset><br><br><br><br>
+
+
+        <fieldset>
+            <legend>Next Page</legend>
+            <form onsubmit="return next()">
+                <label for="name2"></label>
+                <input type="text" id="name2" placeholder="Enter Your Name">
+                <span id="cname2"></span><br><br>
+
+                <label for="password2"></label>
+                <input type="password" id="password2" placeholder="Enter Your Password">
+                <span id="cpword2"></span><br><br>
+
+                <button type="submit">Submit</button><br><br>
+            </form>
+        </fieldset>
+
+
+
+
+
+
 
     <script src="script.js"></script>
 
