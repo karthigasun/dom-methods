@@ -45,7 +45,7 @@ function next(){
     }
 
     else{
-        document.getElementById("cname2").innerHTML="Thank You";
+        document.getElementById("cname2");
         status=true;
     }
 
@@ -55,9 +55,14 @@ function next(){
     }
 
     else{
-        document.getElementById("cpword2").innerHTML="Visit Again";
+        document.getElementById("cpword2");
         status=true;
-    }
+    }   
     return status;
 
+}
+function select(){
+    let selectbox=document.getElementById("mobile");
+
+    alert(selectbox.options[selectbox.selectedIndex].value);
 }

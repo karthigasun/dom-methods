@@ -40,7 +40,7 @@
 
         <fieldset>
             <legend>Next Page</legend>
-            <form onsubmit="return next()">
+            <form onsubmit="return next()" action="form.html">
                 <label for="name2"></label>
                 <input type="text" id="name2" placeholder="Enter Your Name">
                 <span id="cname2"></span><br><br>
@@ -51,7 +51,22 @@
 
                 <button type="submit">Submit</button><br><br>
             </form>
-        </fieldset>
+        </fieldset><br><br><br>
+
+        <fieldset>
+            <legend>Select-box</legend>
+            <form onsubmit="return select()">
+                <label for="mobile">Select Tour Mobile</label>
+                <select name="mobile" id="mobile">
+                    <option value="iphone">Iphone</option>
+                    <option value="samsung">samsung</option>
+                    <option value="oneplus">One plus</option>
+                    <option value="redmi">Redmi</option>
+                </select><br><br>
+
+                <button type="submit">Submit</button><br><br>
+            </form>
+        </fieldset><br><br><br>
 
 
 
