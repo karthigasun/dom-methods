@@ -4,43 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DOM METHODS</title>
 </head>
 <body>
+
+        <!-- Name and Password checking -->
+
+        <h1>Name and Password checking</h1>
+
      <fieldset>
-        
         <legend>Name and Password</legend>
-    <form onsubmit="return validation()">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" placeholder="Enter Your Name">
-        <span id="cname"></span><br><br>
+        <form">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter Your Name">
+            <span id="cname"></span><br><br>
 
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter Your Password" oninput="pass">
-        <span id="pword"></span><br><br>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter Your Password">
+            <span id="pword"></span><br><br>
 
-        <label for="confirm-password">Re-enter Password</label>
-        <input type="password" id="cpassword" placeholder="Re-enter Your Password" oninput="pass()">
-        <span id="cpword"></span><br><br>
+            <label for="confirm-password">Re-enter Password</label>
+            <input type="password" id="cpassword" placeholder="Re-enter Your Password">
+            <span id="cpword"></span><br><br>
 
-        <button type="submit">Submit</button><br><br>
+            <button type="submit" id="valid">Submit</button><br><br>
+        </form>
      </fieldset><br><br>
 
-    </form>
+     <!-- Email-checking  -->
 
-    <fieldset>
+     <h1>Email checking</h1>
+
+     <fieldset>
         <legend>Email</legend>
-        <form onsubmit="return validate()">
+        <form>
             <label for="email">Email</label>
             <input type="text" id="email" placeholder="Enter Your Mail"><br><br>
     
-            <button type="submit">Submit</button><br><br>
-        </form></fieldset><br><br><br><br>
+            <button id="valid-email">Submit</button><br><br>
+        </form>
+     </fieldset><br><br><br><br>
 
 
+     <!-- Next page  -->
+
+     <h1>Next page</h1>
         <fieldset>
             <legend>Next Page</legend>
-            <form onsubmit="return next()" action="form.html">
+            <form action="form.html">
                 <label for="name2"></label>
                 <input type="text" id="name2" placeholder="Enter Your Name">
                 <span id="cname2"></span><br><br>
@@ -49,14 +60,17 @@
                 <input type="password" id="password2" placeholder="Enter Your Password">
                 <span id="cpword2"></span><br><br>
 
-                <button type="submit">Submit</button><br><br>
+                <button type="submit" id="valid-next">Submit</button><br><br>
             </form>
         </fieldset><br><br><br>
 
+        <!-- select box checking  -->
+
+        <h1>Selectbox checking</h1>
         <fieldset>
             <legend>Select-box</legend>
             <form onsubmit="return select()">
-                <label for="mobile">Select Tour Mobile</label>
+                <label for="mobile">Select your Mobile</label>
                 <select name="mobile" id="mobile">
                     <option value="iphone">Iphone</option>
                     <option value="samsung">samsung</option>
@@ -64,14 +78,62 @@
                     <option value="redmi">Redmi</option>
                 </select><br><br>
 
-                <button type="submit">Submit</button><br><br>
+                <button type="submit" id="valid-select">Submit</button><br><br>
             </form>
         </fieldset><br><br><br>
 
+        <!-- Table calculation -->
+        
+        <h1>Table calculation</h1>
+
+        <table border="1">
+            <caption><h3>Table</h3></caption>
+            <tr>
+                <th>Name</th>
+                <th>Unit Price</th>
+                <th>Quantity</th>
+                <th>Action</th>
+                <th>Total price</th>
+            </tr>
 
 
+            <tr>
+                <td>Head phone</td>
+                <td class="rate">600</td>
+                <td><input type="text" class="qty" value="1"></td>
+                <td><button class="submit">calculate</button></td>
+                <td class="total"></td>
 
+            </tr>
 
+            <tr>
+                <td>Mobile</td>
+                <td class="rate">600</td>
+                <td><input type="text" class="qty" value="1"></td>
+                <td><button class="submit">calculate</button></td>
+                <td class="total"></td>
+
+            </tr>
+
+            <tr>
+                <td>Charger</td>
+                <td class="rate">600</td>
+                <td><input type="text" class="qty" value="1"></td>
+                <td><button class="submit">calculate</button></td>
+                <td class="total"></td>
+
+            </tr>
+            <tr>
+                <td>Shoes</td>
+                <td class="rate">600</td>
+                <td><input type="text" class="qty" value="1"></td>
+                <td><button class="submit">calculate</button></td>
+                <td class="total"></td>
+
+            </tr>
+            
+        </table>
+ 
 
 
     <script src="script.js"></script>

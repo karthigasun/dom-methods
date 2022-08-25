@@ -1,3 +1,4 @@
+// Name-checking
 function validation(){
     let name=document.getElementById("name").value;
     let password=document.getElementById("password").value;
@@ -10,8 +11,15 @@ function validation(){
     else if(password.length<6){
         alert("Make Strong Password ");
         return false;
+    }   
+    else{
+        return true;
     }
 }
+document.getElementById("valid").addEventListener("click",validation);
+
+// Password-checking
+
 function pass(){
     let repossword=document.getElementById("cpassword").value;
     let password=document.getElementById("password").value;
@@ -23,6 +31,9 @@ function pass(){
         document.getElementById("cpword").innerHTML="Password did't Match";
     }
 }
+document.getElementById("valid").addEventListener("click",pass);
+
+//Email-checking
 
 function validate(){
     let email=document.getElementById("email").value;
@@ -31,9 +42,11 @@ function validate(){
 
     if(at<1|| dot<at+2 || dot+2>=email.length){
         alert("Please Enter Valid Email Address");
-        return false;
     }
 }
+document.getElementById("valid-email").addEventListener("click",validate);
+
+//Next-page
 
 function next(){
     let name2=document.getElementById("name2").value;
@@ -61,8 +74,47 @@ function next(){
     return status;
 
 }
+document.getElementById("valid-next").addEventListener("click",next);
+
+//Selectbox-checking
+
 function select(){
     let selectbox=document.getElementById("mobile");
 
     alert(selectbox.options[selectbox.selectedIndex].value);
 }
+document.getElementById("valid-select").addEventListener("click",select);
+
+//Table-calculation
+
+function calculate(){
+    let rate,qty,total,
+    rowelement=this.parentNode.parentNode,
+    rateelements=rowelement.getElementsByClassName("rate"),
+    rateelement=rateelements[0],
+    qtyelements=document.getElementsByClassName("qty"),
+    qtyelement=qtyelements[0],
+    totalelements=document.getElementsByClassName("total"),
+    totalelement=totalelements[0];
+
+    rate=rateelement.innerText;
+    qty=qtyelement.value;
+    rate=parseInt(rate);
+
+    total[0]=(rate*qty);
+    // console.log(total);
+    
+    totalelement.innerHTML=total[0];
+    // return "total"
+
+}
+
+let x=document.getElementsByClassName("submit");
+    console.log(x);
+
+for(i=0;i>x.length;i++){
+    x[i].addEventListener("click",calculate);
+
+}console.log(x[i]);
+//let y=document.getElementsByClassName("submit").addEventListener("click",calculate);
+ 
