@@ -89,32 +89,25 @@ document.getElementById("valid-select").addEventListener("click",select);
 
 function calculate(){
     let rate,qty,total,
-    rowelement=this.parentNode.parentNode,
-    rateelements=rowelement.getElementsByClassName("rate"),
-    rateelement=rateelements[0],
-    qtyelements=document.getElementsByClassName("qty"),
-    qtyelement=qtyelements[0],
-    totalelements=document.getElementsByClassName("total"),
-    totalelement=totalelements[0];
 
-    rate=rateelement.innerText;
-    qty=qtyelement.value;
-    rate=parseInt(rate);
-
-    total[0]=(rate*qty);
-    // console.log(total);
+    rowelement=this.parentNode.parentNode,//To select the row
+    rateelement=rowelement.getElementsByClassName("rate")[0],//row element rate
+    qtyelement=rowelement.getElementsByClassName("qty")[0],//row elemet qty
+    totalelement=rowelement.getElementsByClassName("total")[0];//row element total
     
-    totalelement.innerHTML=total[0];
-    // return "total"
+    rate=rateelement.innerText;
+    rate=parseInt(rate);
+    qty=qtyelement.value;
 
+    total=(rate*qty);
+
+    totalelement.innerText=total;
 }
 
-let x=document.getElementsByClassName("submit");
-    console.log(x);
+ let end=document.getElementsByClassName("submit");
+  console.log(end);
 
-for(i=0;i>x.length;i++){
-    x[i].addEventListener("click",calculate);
-
-}console.log(x[i]);
-//let y=document.getElementsByClassName("submit").addEventListener("click",calculate);
- 
+ for(i=0;i<end.length;i++){
+    end[i].addEventListener("click",calculate);
+    console.log(end[i]);
+}
