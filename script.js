@@ -96,10 +96,12 @@ function calculate(){
     totalelement=rowelement.getElementsByClassName("total")[0];//row element total
     
     rate=rateelement.innerText;
+    rate=Number((rate).replace(/,/g,""));
     rate=parseInt(rate);
     qty=qtyelement.value;
 
     total=(rate*qty);
+    total=total.toLocaleString();
 
     totalelement.innerText=total;
 }
