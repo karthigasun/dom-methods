@@ -113,3 +113,29 @@ function calculate(){
     end[i].addEventListener("click",calculate);
     console.log(end[i]);
 }
+
+let image=["../web-page2/images2/slide-1.jpg","../web-page2/images2/slide-2.jpg","../web-page2/images2/slide-3.jpg"],
+slide=document.getElementById("manual"),
+ind=0;
+
+function next(){
+    ind++;
+    if(ind<=image.length){
+        if(ind==image.length){
+            ind=0;
+        }
+        slide.src=image[ind];
+    }
+    // console.log(i);
+}
+
+function prev(){
+    ind--;
+    if(ind<image.length){
+        if(ind==-1){
+            ind=2;
+        }
+        slide.src=image[ind];
+    }
+    // console.log(ind);
+}
