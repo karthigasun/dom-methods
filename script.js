@@ -139,3 +139,20 @@ function prev(){
     }
     // console.log(ind);
 }
+
+let image1=["../web-page2/images2/slide-1.jpg","../web-page2/images2/slide-2.jpg","../web-page2/images2/slide-3.jpg"],
+slide1=document.getElementById("auto"),
+x=0;
+
+function autoChange(){
+    x++;
+    
+    if(x<=image1.length){
+        if(x==image1.length){
+            x=0
+        }
+        slide1.src=image1[x];
+    }
+    // console.log(x);
+}
+setInterval(autoChange,2000);
