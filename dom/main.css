@@ -1,0 +1,16 @@
+.banner{
+    margin: auto;
+    width: 80%;
+}
+
+.banner img{
+    width: 900px;
+    height: 400px;
+}
+.btn{
+    display: flex;
+    justify-content: space-between;
+}
+.btn button{
+    padding: 0px 40px;
+}
