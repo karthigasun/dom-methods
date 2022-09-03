@@ -1,3 +1,4 @@
+//To find the vowels in two different words
 let 
 avow=prompt("Give the first Word"),
 bvow=prompt("Give the second Word"),
@@ -26,8 +27,8 @@ if(avn==bvn){
     console.log("The Vowels Are Equal"+avn,bvn);
 }
 else if(avn>bvn){
-    console.log("First One Has More Vowels",avn);
+    console.log("First One Have More Vowels",avn);
 }
 else{
-    console.log("Second One Has More Vowels",bvn);
+    console.log("Second One Have More Vowels",bvn);
 }
