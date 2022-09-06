@@ -1,0 +1,57 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ .container{
+    width: 100vw;
+}
+.head-cont{
+    margin: auto;
+    width: 90vw;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background-color: aqua;
+    
+}
+h1 a{
+    font-size: 40px;
+    text-decoration: none;
+    color:black;
+}
+li{
+    padding: 10px;
+}
+li a{
+    font-size: 20px;
+    text-decoration: none;
+    color:black;
+}
+ul{
+    list-style: none;
+    position: absolute;
+    right: 0;
+    top: 60px;
+}
+button{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    border: 1px solid black;
+    background: none;
+    padding: 5px;
+    cursor: pointer;
+}
+button span{
+    display: block;
+    width: 20px;
+    border-top: 3px solid black;
+}
+button span:not(:last-child){
+    margin-bottom: 5px;
+}
+.hide{
+    display: none;
+}
